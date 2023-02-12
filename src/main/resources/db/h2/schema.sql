@@ -1,0 +1,7 @@
+--CREATE TABLE IF NOT EXISTS TODOS (
+--    id bigint NOT NULL AUTO_INCREMENT,
+--    title varchar(100) NOT NULL,
+--    todo_order bigint,
+--    completed boolean,
+--    PRIMARY KEY (id)
+--);
