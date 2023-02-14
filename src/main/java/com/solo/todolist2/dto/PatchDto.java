@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PatchDto {
-    private int id;
+    private Long id;
     private String title;
-    private int todo_order;
+    private Long todo_order;
     private boolean completed;
 }

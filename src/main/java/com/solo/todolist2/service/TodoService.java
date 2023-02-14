@@ -29,7 +29,7 @@ public class TodoService {
        return repository.save(findTodo);
    }
 
-    public Todos getTodo(int id) {
+    public Todos getTodo(Long id) {
         Todos findTodo = findExistTodo(id);
         return findTodo;
     }
@@ -37,14 +37,14 @@ public class TodoService {
     public List<Todos> getList() {
      return (List<Todos>) repository.findAll();
     }
-    public void deleteTodo(int id) {
+    public void deleteTodo(Long id) {
         Todos findTodo = findExistTodo(id);
         repository.delete(findTodo);
     }
     public void deleteList() {
         repository.deleteAll();
     }
-    private Todos findExistTodo(int id) {
+    private Todos findExistTodo(Long id) {
         Todos findTodo = repository.findById(id).get();
 //        Todos findTodo = optionalTodo.orElseThrow(()-> new RuntimeException("NOT FOUND"));
 

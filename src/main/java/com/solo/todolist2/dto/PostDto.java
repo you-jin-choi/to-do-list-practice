@@ -5,6 +5,6 @@ import lombok.Getter;
 @Getter
 public class PostDto {
     private String title;
-    private int todo_order;
+    private Long todo_order;
     private boolean completed;
 }

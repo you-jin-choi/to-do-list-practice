@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/")
 public class TodoController {
 
@@ -33,7 +34,7 @@ public class TodoController {
     }
 
     @PatchMapping("{id}")
-    public ResponseEntity patchTodo(@PathVariable("id") int id,
+    public ResponseEntity patchTodo(@PathVariable("id") Long id,
                                     @RequestBody PatchDto patchDto) {
 
         patchDto.setId(id);
@@ -49,7 +50,7 @@ public class TodoController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity getTodo(@PathVariable("id") int id) {
+    public ResponseEntity getTodo(@PathVariable("id") Long id) {
 
         Todos response = todoService.getTodo(id);
 
@@ -65,7 +66,7 @@ public class TodoController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity deleteTodo(@PathVariable("id") int id) {
+    public ResponseEntity deleteTodo(@PathVariable("id") Long id) {
 
         todoService.deleteTodo(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

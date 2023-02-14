@@ -14,13 +14,13 @@ public class Todos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
     private String title;
 
     @Column
-    private int todo_order;
+    private Long todo_order;
 
     @Column
     private boolean completed;
